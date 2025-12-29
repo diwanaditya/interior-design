@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wall Panel & Cladding Solutions in Ahmedabad | Pavan Interior Design</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Premium wall panel and wall cladding solutions in Ahmedabad. Decorative wall panels, wooden cladding, stone cladding & modern finishes by Pavan Interior Design.">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:"Playfair Display",serif;
+  background:#f8f8f6;
+  color:#1a1a1a;
+}
+
+/* HEADER */
+header{
+  padding:26px 20px;
+  text-align:center;
+}
+header img{
+  height:80px;
+}
+
+/* HERO */
+.hero{
+  padding:90px 20px 65px;
+  background:#ffffff;
+  text-align:center;
+}
+.hero h1{
+  font-size:42px;
+  margin-bottom:14px;
+}
+.hero p{
+  font-size:18px;
+  max-width:900px;
+  margin:auto;
+  color:#555;
+  line-height:1.8;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:55px 20px;
+}
+.section{
+  margin-bottom:50px;
+}
+.section h2{
+  font-size:34px;
+  margin-bottom:14px;
+}
+.section p{
+  font-size:16px;
+  line-height:1.9;
+  color:#444;
+  max-width:1000px;
+}
+
+/* PANEL TYPES */
+.types{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+  margin-top:30px;
+}
+.type-box{
+  background:#ffffff;
+  padding:28px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+.type-box h4{
+  font-size:18px;
+  margin-bottom:10px;
+}
+.type-box p{
+  font-size:14px;
+  line-height:1.7;
+  color:#555;
+}
+
+/* PROCESS */
+.process{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+  margin-top:30px;
+}
+.process-box{
+  background:#ffffff;
+  padding:26px;
+  border-radius:16px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.05);
+}
+.process-box h4{
+  font-size:17px;
+  margin-bottom:8px;
+}
+.process-box p{
+  font-size:14px;
+  color:#555;
+  line-height:1.7;
+}
+
+/* IMAGE GRID */
+.image-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:30px;
+}
+.image-box{
+  height:260px;
+  background:#ddd;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:14px;
+  color:#666;
+}
+
+/* MATERIALS */
+.materials{
+  background:#ffffff;
+  padding:55px;
+  border-radius:22px;
+}
+.materials ul{
+  list-style:none;
+}
+.materials li{
+  font-size:16px;
+  line-height:1.9;
+  margin-bottom:12px;
+  padding-left:18px;
+  position:relative;
+}
+.materials li::before{
+  content:"•";
+  position:absolute;
+  left:0;
+  color:#9bd0b2;
+  font-size:20px;
+}
+
+/* CTA */
+.cta{
+  background:#1a1a1a;
+  color:#ffffff;
+  padding:70px 20px;
+  text-align:center;
+}
+.cta h3{
+  font-size:32px;
+  margin-bottom:14px;
+}
+.cta p{
+  font-size:17px;
+  max-width:780px;
+  margin:auto;
+  opacity:0.9;
+}
+.cta a{
+  display:inline-block;
+  margin-top:26px;
+  padding:14px 34px;
+  border:1px solid #ffffff;
+  color:#ffffff;
+  text-decoration:none;
+  letter-spacing:1px;
+}
+.cta a:hover{
+  background:#ffffff;
+  color:#000;
+}
+
+/* FOOTER */
+.site-footer {
+  background: #0e0e0e;
+  color: #eaeaea;
+  padding: 80px 20px 30px;
+}
+.footer-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 60px;
+}
+.footer-brand img {
+  height: 70px;
+  margin-bottom: 20px;
+}
+.footer-brand p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #bdbdbd;
+}
+.footer-social a {
+  display:inline-block;
+  margin-right:15px;
+  color:#9bd0b2;
+  text-decoration:none;
+}
+.footer-col h4 {
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+.footer-col a {
+  display:block;
+  color:#bdbdbd;
+  text-decoration:none;
+  margin-bottom:10px;
+  font-size:14px;
+}
+.footer-locations {
+  margin:50px auto 20px;
+  padding:18px;
+  background:#1a1a1a;
+  text-align:center;
+  border-radius:10px;
+  font-size:14px;
+}
+.footer-bottom {
+  text-align:center;
+  font-size:13px;
+  color:#888;
+  margin-top:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .types{grid-template-columns:1fr 1fr}
+  .process{grid-template-columns:1fr 1fr}
+  .image-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .hero h1{font-size:30px}
+  .types,.process{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="../index.html">
+    <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
+  </a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Wall Panel & Cladding Solutions</h1>
+  <p>
+    Transform plain walls into architectural statements with premium wall panels
+    and cladding solutions designed for elegance, durability, and timeless appeal.
+  </p>
+</section>
+
+<!-- INTRO -->
+<section class="container section">
+  <h2>Why Wall Panels & Cladding Matter</h2>
+  <p>
+    Wall panels and cladding are not just decorative elements — they define character,
+    add depth, improve acoustics, and elevate the overall ambience of a space.
+    At Pavan Interior Design, we carefully design wall treatments that complement
+    architecture, furniture, lighting, and lifestyle.
+  </p>
+</section>
+
+<!-- TYPES -->
+<section class="container section">
+  <h2>Types of Wall Panels & Cladding We Offer</h2>
+
+  <div class="types">
+    <div class="type-box">
+      <h4>Wooden Wall Panels</h4>
+      <p>Warm, natural finishes ideal for living rooms, bedrooms, and feature walls.</p>
+    </div>
+
+    <div class="type-box">
+      <h4>Stone & Texture Cladding</h4>
+      <p>Natural stone, veneer, and textured surfaces for premium visual impact.</p>
+    </div>
+
+    <div class="type-box">
+      <h4>Fluted & 3D Panels</h4>
+      <p>Modern fluted, grooved, and 3D panels for contemporary interiors.</p>
+    </div>
+
+    <div class="type-box">
+      <h4>TV Unit Back Panels</h4>
+      <p>Custom-designed TV wall panels integrating storage and lighting.</p>
+    </div>
+
+    <div class="type-box">
+      <h4>Commercial Wall Cladding</h4>
+      <p>Durable, low-maintenance wall solutions for offices and retail spaces.</p>
+    </div>
+
+    <div class="type-box">
+      <h4>Exterior & Semi-Outdoor Cladding</h4>
+      <p>Weather-resistant cladding materials for balconies and façade accents.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="container section">
+  <h2>Our Wall Panel Execution Process</h2>
+
+  <div class="process">
+    <div class="process-box">
+      <h4>01. Design & Concept</h4>
+      <p>Material selection, layout planning, and finish finalization.</p>
+    </div>
+
+    <div class="process-box">
+      <h4>02. Sample & Mockups</h4>
+      <p>Finish samples and visual previews for client approval.</p>
+    </div>
+
+    <div class="process-box">
+      <h4>03. Precision Installation</h4>
+      <p>Clean execution with perfect alignment and concealed fixing.</p>
+    </div>
+
+    <div class="process-box">
+      <h4>04. Final Detailing</h4>
+      <p>Edge finishing, lighting integration, and quality checks.</p>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGES -->
+<section class="container section">
+  <h2>Wall Panel & Cladding Projects</h2>
+
+  <div class="image-grid">
+    <div class="image-box">Wooden Panel Feature Wall</div>
+    <div class="image-box">Stone Cladding Accent</div>
+    <div class="image-box">TV Unit Wall Panel</div>
+    <div class="image-box">Fluted Panel Design</div>
+    <div class="image-box">Commercial Wall Cladding</div>
+    <div class="image-box">Luxury Bedroom Panel</div>
+  </div>
+</section>
+
+<!-- MATERIALS -->
+<section class="container section">
+  <div class="materials">
+    <h2>Materials & Finishes We Use</h2>
+    <ul>
+      <li>Natural wood & engineered wood panels</li>
+      <li>Stone veneer & textured laminates</li>
+      <li>PU, MDF, and composite cladding panels</li>
+      <li>Moisture-resistant and fire-retardant materials</li>
+      <li>Premium finishes with long-term durability</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h3>Upgrade Your Walls With Purposeful Design</h3>
+  <p>
+    From subtle elegance to bold architectural statements, our wall panel
+    and cladding solutions are crafted to elevate your space.
+  </p>
+  <a href="../book-consultation.html">Plan Your Wall Design</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
+      <p>
+        Crafting timeless interiors with precision, transparency, and design excellence
+        across residential and commercial spaces.
+      </p>
+      <div class="footer-social">
+        <a href="https://wa.me/918980531520">WhatsApp</a>
+        <a href="mailto:info@pavaninterior.com">Email</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="../index.html">Home</a>
+      <a href="../folders/work.html">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../folders/pricing.html">Pricing</a>
+      <a href="../book-consultation.html">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="home-interior.html">Home Interior</a>
+      <a href="kitchen.html">Modular Kitchen</a>
+      <a href="office-interior-design.html">Office Interior</a>
+      <a href="architecture-consulting.html">Architecture Consulting</a>
+      <a href="turnkey-solution.html">Turnkey Solutions</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <p>+91 89805 31520</p>
+      <p>info@pavaninterior.com</p>
+      <p>
+        202, Aaron Spectra, Rajpath Rangoli Rd,<br>
+        Near Rajpath Club, Bodakdev,<br>
+        Ahmedabad, Gujarat 380054
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer-locations">
+    Ahmedabad · Gandhinagar · Rajkot · Surat · Vadodara · Pune · Hyderabad · Bangalore · Thane · Goregaon East
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Pavan Interior Design. All Rights Reserved.
+  </div>
+</footer>
+
+</body>
+</html>
