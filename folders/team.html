@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Experts | Luxury Interior Design</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the experts behind our interior excellence.">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<style>
+  .site-footer {
+  background: #0e0e0e;
+  color: #eaeaea;
+  padding: 80px 20px 30px;
+  font-family: "Playfair Display", serif;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 60px;
+}
+
+.footer-brand img {
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.footer-brand p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #bdbdbd;
+  max-width: 420px;
+}
+
+.footer-social {
+  margin-top: 20px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 14px;
+  color: #9bd0b2;
+  text-decoration: none;
+}
+
+.footer-col h4 {
+  font-size: 17px;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.footer-col a {
+  display: block;
+  color: #bdbdbd;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-col a:hover {
+  color: #9bd0b2;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #bdbdbd;
+}
+
+.footer-locations {
+  max-width: 1300px;
+  margin: 50px auto 20px;
+  padding: 18px;
+  text-align: center;
+  background: #1a1a1a;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+}
+</style>
+
+<body>
+
+<!-- HEADER (reuse brand identity) -->
+<header class="header">
+  <div class="header-inner">
+
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<!-- ================= TEAM SECTION ================= -->
+<section class="team-section scroll-section">
+
+  <!-- Background image space -->
+  <!-- You will set background in CSS -->
+  <div class="team-overlay"></div>
+
+  <div class="team-container">
+
+    <h1 class="team-title fade-up">Our Experts</h1>
+
+    <!-- MEMBER 1 -->
+    <div class="team-member fade-up">
+      <div class="member-image">
+        <!-- RANDOM IMAGE FOR NOW -->
+        <img src="../assets/images/team/member1.jpg" alt="Pavan Balani">
+      </div>
+      <div class="member-info">
+        <h2>Pavan Balani</h2>
+        <h4>Founder</h4>
+        <p>
+          Pavan Balani is the visionary founder and driving force behind the company.
+          With over 10+ years of experience in the interior industry, he has successfully
+          managed and delivered residential, commercial, and turnkey projects across India.
+          His leadership, attention to detail, and commitment to transparent pricing
+          have built long-term trust with clients and partners alike.
+        </p>
+      </div>
+    </div>
+
+    <!-- MEMBER 2 -->
+    <div class="team-member fade-up">
+      <div class="member-image">
+        <img src="../assets/images/team/member2.jpg" alt="Project Manager">
+      </div>
+      <div class="member-info">
+        <h2>Project Manager</h2>
+        <h4>Operations & Execution</h4>
+        <p>
+          The project manager ensures seamless coordination between design,
+          vendors, and on-site execution. With strong operational expertise,
+          they manage timelines, budgets, and quality control to ensure
+          every project is delivered efficiently and professionally.
+        </p>
+      </div>
+    </div>
+
+    <!-- MEMBER 3 -->
+    <div class="team-member fade-up">
+      <div class="member-image">
+        <img src="../assets/images/team/member3.jpg" alt="Site Supervisor">
+      </div>
+      <div class="member-info">
+        <h2>Site Supervisor</h2>
+        <h4>On-Site Execution</h4>
+        <p>
+          The site supervisor oversees daily on-site activities, ensuring
+          workmanship quality and safety standards. Acting as the bridge
+          between planning and execution, they guarantee smooth progress
+          and timely completion of every project.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<script src="../js/hero-slider.js"></script>
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
+      <p>
+        Crafting timeless interiors with precision, transparency, and design excellence
+        across residential and commercial spaces.
+      </p>
+
+      <div class="footer-social">
+        <a href="https://wa.me/918980531520" target="_blank">WhatsApp</a>
+        <a href="mailto:info@pavaninterior.com">Email</a>
+      </div>
+    </div>
+
+    <!-- COMPANY -->
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="../index.html">Home</a>
+      <a href="../folders/work.html">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../folders/pricing.html">Pricing</a>
+      <a href="../book-consultation.html">Contact</a>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#home_interior">Home Interior</a>
+      <a href="#services">Modular Kitchen</a>
+      <a href="#services">Office Interior</a>
+      <a href="#services">Architecture Consulting</a>
+      <a href="#services">Turnkey Solutions</a>
+      <a href="#services">Packages</a>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <p>+91 89805 31520</p>
+      <p>info@pavaninterior.com</p>
+      <p>
+        202, Aaron Spectra, Rajpath Rangoli Rd,<br>
+        Near Rajpath Club, Bodakdev,<br>
+        Ahmedabad, Gujarat 380054
+      </p>
+    </div>
+
+  </div>
+
+  <!-- LOCATIONS -->
+  <div class="footer-locations">
+    Ahmedabad · Gandhinagar · Rajkot · Surat · Vadodara · Pune · Hyderabad · Bangalore · Thane · Goregaon East
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="footer-bottom">
+    © 2025 Pavan Interior Design. All Rights Reserved.
+  </div>
+</footer>
+</body>
+</html>

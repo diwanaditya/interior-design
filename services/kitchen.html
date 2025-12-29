@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Modular Kitchen Design | Pavan Interior Design</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ================= RESET ================= */
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* ================= BODY ================= */
+body{
+  font-family:"Playfair Display",serif;
+  color:#222;
+  background:#ffffff;
+}
+
+/* ================= HEADER ================= */
+header{
+  position:fixed;
+  top:25px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:100;
+}
+header img{
+  height:80px;
+}
+
+/* ================= HERO ================= */
+.hero{
+  min-height:100vh;
+  background:url("../assets/images/kitchen/hero.jpg") center/cover no-repeat;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+}
+.hero-content{
+  position:relative;
+  text-align:center;
+  color:#fff;
+  max-width:800px;
+  padding:20px;
+}
+.hero-content h1{
+  font-size:48px;
+  margin-bottom:12px;
+}
+.hero-content p{
+  font-size:18px;
+  opacity:0.9;
+}
+
+/* ================= CONTENT ================= */
+.section{
+  max-width:1200px;
+  margin:0 auto;
+  padding:120px 20px;
+}
+.section h2{
+  font-size:38px;
+  margin-bottom:20px;
+}
+.section p{
+  font-size:17px;
+  line-height:1.8;
+  color:#555;
+  max-width:900px;
+}
+
+/* ================= PROCESS ================= */
+.process{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+  margin-top:60px;
+}
+.process-card{
+  background:#f7f7f6;
+  padding:35px;
+  border-radius:18px;
+}
+.process-card h4{
+  font-size:20px;
+  margin-bottom:10px;
+}
+.process-card p{
+  font-size:15px;
+}
+
+/* ================= KITCHEN TYPES ================= */
+.kitchen-type{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  margin-top:120px;
+  align-items:center;
+}
+.kitchen-type:nth-child(even){
+  grid-template-columns:1fr 1fr;
+}
+.kitchen-type img{
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  border-radius:20px;
+}
+.kitchen-type h3{
+  font-size:30px;
+  margin-bottom:14px;
+}
+.kitchen-type p{
+  font-size:16px;
+  line-height:1.8;
+  color:#555;
+}
+
+/* ================= MATERIALS ================= */
+.materials{
+  background:#f3f3f0;
+  border-radius:24px;
+  padding:60px;
+  margin-top:120px;
+}
+.materials ul{
+  list-style:none;
+  margin-top:30px;
+}
+.materials li{
+  font-size:16px;
+  margin-bottom:14px;
+}
+
+/* ================= GALLERY ================= */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+  margin-top:120px;
+}
+.gallery img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:16px;
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+  background: #0e0e0e;
+  color: #eaeaea;
+  padding: 80px 20px 30px;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 60px;
+}
+
+.footer-brand img {
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.footer-brand p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #bdbdbd;
+  max-width: 420px;
+}
+
+.footer-social a {
+  margin-right: 15px;
+  color: #9bd0b2;
+  text-decoration: none;
+}
+
+.footer-col h4 {
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+
+.footer-col a {
+  display: block;
+  color: #bdbdbd;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-col a:hover {
+  color: #9bd0b2;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #bdbdbd;
+}
+
+.footer-locations {
+  max-width: 1300px;
+  margin: 50px auto 20px;
+  padding: 18px;
+  text-align: center;
+  background: #1a1a1a;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+  .process{grid-template-columns:1fr 1fr}
+  .kitchen-type{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .footer-container{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .process{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr}
+  .hero-content h1{font-size:32px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="../index.html">
+    <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
+  </a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Modular Kitchen Design</h1>
+    <p>Where functionality meets refined craftsmanship and everyday luxury.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section">
+  <h2>Thoughtfully Designed Modular Kitchens</h2>
+  <p>
+    At Pavan Interior Design, we create modular kitchens that balance aesthetics,
+    efficiency, and durability. Every kitchen is planned around your cooking habits,
+    storage needs, and lifestyle—ensuring seamless movement, optimal space usage,
+    and long-lasting performance.
+  </p>
+
+  <div class="process">
+    <div class="process-card">
+      <h4>01. Space Analysis</h4>
+      <p>Precise measurements and layout planning based on utilities and workflow.</p>
+    </div>
+    <div class="process-card">
+      <h4>02. 3D Visualization</h4>
+      <p>Detailed 3D designs with layout, finishes, colors, and lighting.</p>
+    </div>
+    <div class="process-card">
+      <h4>03. Customization</h4>
+      <p>Multiple design revisions until the kitchen reflects your preferences.</p>
+    </div>
+    <div class="process-card">
+      <h4>04. Execution</h4>
+      <p>Factory-finished modules installed with precision and site supervision.</p>
+    </div>
+  </div>
+</section>
+
+<!-- KITCHEN TYPES -->
+<section class="section">
+
+  <div class="kitchen-type">
+    <img src="../assets/images/kitchen/l-shape.jpg" alt="L Shape Kitchen">
+    <div>
+      <h3>L-Shaped Kitchen</h3>
+      <p>
+        Ideal for compact and medium-sized homes, L-shaped kitchens maximize
+        corner space while keeping the cooking zone efficient and open.
+      </p>
+    </div>
+  </div>
+
+  <div class="kitchen-type">
+    <div>
+      <h3>U-Shaped Kitchen</h3>
+      <p>
+        Designed for high storage and workflow efficiency, U-shaped kitchens
+        offer ample counter space and structured organization.
+      </p>
+    </div>
+    <img src="../assets/images/kitchen/u-shape.jpg" alt="U Shape Kitchen">
+  </div>
+
+  <div class="kitchen-type">
+    <img src="../assets/images/kitchen/parallel.jpg" alt="Parallel Kitchen">
+    <div>
+      <h3>Parallel Kitchen</h3>
+      <p>
+        Perfect for narrow spaces, parallel kitchens ensure smooth movement
+        between cooking and prep zones.
+      </p>
+    </div>
+  </div>
+
+  <div class="kitchen-type">
+    <div>
+      <h3>Island & Hybrid Kitchens</h3>
+      <p>
+        A premium choice for larger homes, island kitchens add social and functional
+        value while hybrid designs blend storage and open layouts.
+      </p>
+    </div>
+    <img src="../assets/images/kitchen/island.jpg" alt="Island Kitchen">
+  </div>
+
+</section>
+
+<!-- MATERIALS -->
+<section class="section">
+  <div class="materials">
+    <h2>Materials & Hardware We Use</h2>
+    <ul>
+      <li>✔ Marine-grade & BWP plywood cabinets</li>
+      <li>✔ Soft-close hinges & channels (Hettich / Hafele)</li>
+      <li>✔ Quartz, granite & solid-surface countertops</li>
+      <li>✔ Acrylic, laminate, veneer & PU finishes</li>
+      <li>✔ Modular accessories & smart storage systems</li>
+    </ul>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section">
+  <h2>Our Modular Kitchen Projects</h2>
+  <div class="gallery">
+    <img src="../assets/images/kitchen/gallery1.jpg" alt="">
+    <img src="../assets/images/kitchen/gallery2.jpg" alt="">
+    <img src="../assets/images/kitchen/gallery3.jpg" alt="">
+    <img src="../assets/images/kitchen/gallery4.jpg" alt="">
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <img src="../assets/images/logo/logo.png" alt="">
+      <p>Crafting timeless interiors with precision and transparency.</p>
+      <div class="footer-social">
+        <a href="https://wa.me/918980531520">WhatsApp</a>
+        <a href="mailto:info@pavaninterior.com">Email</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="../index.html">Home</a>
+      <a href="../folders/work.html">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../folders/pricing.html">Pricing</a>
+      <a href="../book-consultation.html">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="home-interior.html">Home Interior</a>
+      <a href="modular-kitchen.html">Modular Kitchen</a>
+      <a href="#">Office Interior</a>
+      <a href="#">Architecture Consulting</a>
+      <a href="#">Turnkey Solutions</a>
+      <a href="#">Packages</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <p>+91 89805 31520</p>
+      <p>info@pavaninterior.com</p>
+      <p>Ahmedabad, Gujarat</p>
+    </div>
+
+  </div>
+
+  <div class="footer-locations">
+    Ahmedabad · Gandhinagar · Rajkot · Surat · Vadodara · Pune · Hyderabad · Bangalore · Thane · Goregaon East
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Pavan Interior Design. All Rights Reserved.
+  </div>
+</footer>
+
+</body>
+</html>

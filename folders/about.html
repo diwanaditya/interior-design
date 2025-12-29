@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Us | Pavan Interior Design</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* BODY */
+body{
+  font-family:"Playfair Display",serif;
+  color:#ffffff;
+  background:#000;
+}
+
+/* FIXED LOGO HEADER */
+header{
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:100;
+}
+header img{
+  height:90px;
+}
+
+/* STICKY BACKGROUND */
+.page-wrapper{
+  background-image:url("../assets/images/about/about-bg.jpg"); 
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+/* OVERLAY */
+.overlay{
+  background:rgba(0,0,0,0.65);
+}
+
+/* VIDEO HERO */
+.video-section{
+  height:100vh;
+  position:relative;
+}
+.video-section video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.video-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.video-overlay h1{
+  font-size:48px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+/* CONTENT SECTION */
+.content{
+  max-width:1100px;
+  margin:0 auto;
+  padding:120px 20px;
+}
+
+/* TITLES */
+.section-title{
+  font-size:38px;
+  margin-bottom:25px;
+}
+.section-sub{
+  font-size:18px;
+  color:rgba(255,255,255,0.85);
+  margin-bottom:40px;
+  line-height:1.8;
+}
+
+/* STORY BLOCK */
+.story{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  margin-bottom:120px;
+}
+.story p{
+  font-size:17px;
+  line-height:1.9;
+  color:rgba(255,255,255,0.85);
+}
+
+/* ACHIEVEMENTS */
+.achievements{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+  margin-bottom:120px;
+}
+.achievement{
+  background:rgba(255,255,255,0.08);
+  padding:30px;
+  border-radius:14px;
+  text-align:center;
+}
+.achievement h3{
+  font-size:32px;
+  margin-bottom:8px;
+}
+.achievement span{
+  font-size:14px;
+  color:rgba(255,255,255,0.75);
+}
+
+/* AWARDS */
+.awards{
+  background:rgba(255,255,255,0.08);
+  border-radius:18px;
+  padding:50px;
+}
+.awards ul{
+  list-style:none;
+}
+.awards li{
+  margin-bottom:18px;
+  font-size:16px;
+  color:rgba(255,255,255,0.9);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .story{grid-template-columns:1fr}
+  .achievements{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .video-overlay h1{font-size:30px}
+  .achievements{grid-template-columns:1fr}
+}
+.site-footer {
+  background: #0e0e0e;
+  color: #eaeaea;
+  padding: 80px 20px 30px;
+  font-family: "Playfair Display", serif;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 60px;
+}
+
+.footer-brand img {
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.footer-brand p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #bdbdbd;
+  max-width: 420px;
+}
+
+.footer-social {
+  margin-top: 20px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 14px;
+  color: #9bd0b2;
+  text-decoration: none;
+}
+
+.footer-col h4 {
+  font-size: 17px;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.footer-col a {
+  display: block;
+  color: #bdbdbd;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-col a:hover {
+  color: #9bd0b2;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #bdbdbd;
+}
+
+.footer-locations {
+  max-width: 1300px;
+  margin: 50px auto 20px;
+  padding: 18px;
+  text-align: center;
+  background: #1a1a1a;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+}
+
+/* MISSION & VISION */
+.mv-section {
+  max-width: 900px;
+  margin: 0 auto 120px;
+}
+
+.mv-tabs {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.mv-tab {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 18px;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  padding-bottom: 6px;
+  position: relative;
+}
+
+.mv-tab.active {
+  color: #ffffff;
+}
+
+.mv-tab.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 40px;
+  height: 2px;
+  background: #56ca1c;
+}
+
+.mv-content {
+  max-width: 700px;
+}
+
+.mv-panel {
+  display: none;
+}
+
+.mv-panel.active {
+  display: block;
+}
+
+.mv-panel p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.85);
+}
+/* GLOBAL CONTENT GLASS BACKGROUND */
+.content-glass {
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  border-radius: 22px;
+  padding: 90px 80px;
+  margin-top: 120px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* HEADINGS */
+.section-title {
+  color: #ffffff;
+  letter-spacing: 0.3px;
+}
+
+/* SUBTEXT */
+.section-sub {
+  color: rgba(255,255,255,0.9);
+}
+
+/* STORY TEXT */
+.story p {
+  color: rgba(255,255,255,0.9);
+}
+
+/* ACHIEVEMENT CARDS */
+.achievement {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.achievement h3 {
+  color: #ffffff;
+}
+
+.achievement span {
+  color: rgba(255,255,255,0.85);
+}
+
+/* AWARDS BLOCK */
+.awards {
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.awards li {
+  color: rgba(255,255,255,0.92);
+}
+
+
+/* MOBILE SAFE */
+@media (max-width: 768px) {
+  .content-glass {
+    padding: 60px 30px;
+  }
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- FIXED LOGO -->
+<header>
+  <a href="../index.html">
+    <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
+  </a>
+</header>
+
+<div class="page-wrapper">
+<div class="overlay">
+
+<!-- VIDEO HERO -->
+<section class="video-section">
+  <video autoplay muted loop playsinline>
+    <!-- 🔽 ADD VIDEO PATH -->
+    <source src="../assets/images/videos/intro.mp4" type="video/mp4">
+  </video>
+  <div class="video-overlay">
+    <h1>Built On Trust</h1>
+  </div>
+</section>
+
+<!-- ABOUT CONTENT -->
+<section class="content content-glass">
+
+  <h2 class="section-title">About Pavan Interior Design</h2>
+  <p class="section-sub">
+    We are a design-driven interior studio delivering thoughtful, functional,
+    and timeless spaces across residential, commercial, and turnkey projects.
+  </p>
+
+  <!-- STORY -->
+  <div class="story">
+    <p>
+      Pavan Interior Design began as a small execution-focused firm with a clear belief —
+      interiors should be honest, practical, and long-lasting.
+      Over the years, consistent workmanship, transparent pricing, and strong
+      client relationships transformed our journey from modest beginnings
+      into a trusted interior brand.
+    </p>
+
+    <p>
+      Today, we manage complex turnkey projects, premium residences,
+      and large-scale interiors while maintaining hands-on involvement
+      at every stage. Our growth has been built through discipline,
+      site execution strength, and respect for client timelines and budgets.
+    </p>
+  </div>
+
+  <!-- MISSION & VISION -->
+<section class="mv-section">
+
+  <div class="mv-tabs">
+    <button class="mv-tab active" data-tab="mission">Our Mission</button>
+    <button class="mv-tab" data-tab="vision">Our Vision</button>
+  </div>
+
+  <div class="mv-content">
+
+    <div class="mv-panel active" id="mission">
+      <p>
+        Our mission is to design and deliver interior spaces that are
+        thoughtful, durable, and timeless. We focus on honest execution,
+        transparent processes, and practical design solutions that enhance
+        everyday living while respecting budgets, timelines, and long-term value.
+      </p>
+    </div>
+
+    <div class="mv-panel" id="vision">
+      <p>
+        Our vision is to become one of the most trusted interior design
+        and execution brands in India by setting benchmarks in quality,
+        site discipline, and client satisfaction — creating spaces that
+        remain relevant, functional, and refined for years to come.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- ACHIEVEMENTS -->
+  <div class="achievements">
+    <div class="achievement">
+      <h3>10+</h3>
+      <span>Years of Industry Experience</span>
+    </div>
+    <div class="achievement">
+      <h3>500+</h3>
+      <span>Completed Projects</span>
+    </div>
+    <div class="achievement">
+      <h3>400+</h3>
+      <span>Turnkey Executions</span>
+    </div>
+    <div class="achievement">
+      <h3>98%</h3>
+      <span>Client Satisfaction</span>
+    </div>
+  </div>
+
+  <!-- AWARDS -->
+  <div class="awards">
+    <h2 class="section-title">Recognitions & Industry Milestones</h2>
+    <ul>
+      <li>• Recognised for excellence in residential interiors by regional design forums</li>
+      <li>• Awarded for consistent quality execution in turnkey projects</li>
+      <li>• Featured among emerging interior brands in Ahmedabad</li>
+      <li>• Trusted execution partner for premium residential developments</li>
+      <li>• Appreciated by clients for transparency and post-handover support</li>
+    </ul>
+  </div>
+
+</section>
+
+</div>
+</div>
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
+      <p>
+        Crafting timeless interiors with precision, transparency, and design excellence
+        across residential and commercial spaces.
+      </p>
+
+      <div class="footer-social">
+        <a href="https://wa.me/918980531520" target="_blank">WhatsApp</a>
+        <a href="mailto:info@pavaninterior.com">Email</a>
+      </div>
+    </div>
+
+    <!-- COMPANY -->
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="../index.html">Home</a>
+      <a href="../folders/work.html">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../folders/pricing.html">Pricing</a>
+      <a href="../book-consultation.html">Contact</a>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#home_interior">Home Interior</a>
+      <a href="#services">Modular Kitchen</a>
+      <a href="#services">Office Interior</a>
+      <a href="#services">Architecture Consulting</a>
+      <a href="#services">Turnkey Solutions</a>
+      <a href="#services">Packages</a>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <p>+91 89805 31520</p>
+      <p>info@pavaninterior.com</p>
+      <p>
+        202, Aaron Spectra, Rajpath Rangoli Rd,<br>
+        Near Rajpath Club, Bodakdev,<br>
+        Ahmedabad, Gujarat 380054
+      </p>
+    </div>
+
+  </div>
+
+  <!-- LOCATIONS -->
+  <div class="footer-locations">
+    Ahmedabad · Gandhinagar · Rajkot · Surat · Vadodara · Pune · Hyderabad · Bangalore · Thane · Goregaon East
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="footer-bottom">
+    © 2025 Pavan Interior Design. All Rights Reserved.
+  </div>
+</footer>
+<script>
+const tabs = document.querySelectorAll('.mv-tab');
+const panels = document.querySelectorAll('.mv-panel');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    panels.forEach(p => p.classList.remove('active'));
+
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.tab).classList.add('active');
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Office Interior Design in Ahmedabad | Pavan Interior Design</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional office interior design in Ahmedabad. We design productive, ergonomic, and brand-focused office spaces for startups, corporates, and commercial environments.">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ================= RESET ================= */
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* ================= BODY ================= */
+body{
+  font-family:"Playfair Display",serif;
+  color:#222;
+  background:#ffffff;
+}
+
+/* ================= HEADER ================= */
+header{
+  position:fixed;
+  top:25px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:100;
+}
+header img{
+  height:80px;
+}
+
+/* ================= HERO ================= */
+.hero{
+  min-height:100vh;
+  background:url("../assets/images/office/hero.jpg") center/cover no-repeat;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+}
+.hero-content{
+  position:relative;
+  text-align:center;
+  color:#fff;
+  max-width:900px;
+  padding:20px;
+}
+.hero-content h1{
+  font-size:48px;
+  margin-bottom:12px;
+}
+.hero-content p{
+  font-size:18px;
+  opacity:0.9;
+}
+
+/* ================= SECTION ================= */
+.section{
+  max-width:1200px;
+  margin:0 auto;
+  padding:120px 20px;
+}
+.section h2{
+  font-size:38px;
+  margin-bottom:20px;
+}
+.section p{
+  font-size:17px;
+  line-height:1.85;
+  color:#555;
+  max-width:1000px;
+}
+
+/* ================= WHY OFFICE DESIGN ================= */
+.highlights{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+  margin-top:60px;
+}
+.highlight{
+  background:#f7f7f6;
+  padding:35px;
+  border-radius:18px;
+}
+.highlight h4{
+  font-size:20px;
+  margin-bottom:10px;
+}
+.highlight p{
+  font-size:15px;
+}
+
+/* ================= OFFICE TYPES ================= */
+.office-type{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  margin-top:120px;
+  align-items:center;
+}
+.office-type img{
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  border-radius:20px;
+}
+.office-type h3{
+  font-size:30px;
+  margin-bottom:14px;
+}
+.office-type p{
+  font-size:16px;
+  line-height:1.8;
+  color:#555;
+}
+
+/* ================= PROCESS ================= */
+.process{
+  background:#f3f3f0;
+  border-radius:24px;
+  padding:70px;
+  margin-top:120px;
+}
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+  margin-top:40px;
+}
+.process-step{
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+}
+.process-step h4{
+  font-size:18px;
+  margin-bottom:8px;
+}
+.process-step p{
+  font-size:15px;
+}
+
+/* ================= MATERIALS ================= */
+.materials{
+  margin-top:120px;
+}
+.materials ul{
+  list-style:none;
+  margin-top:30px;
+}
+.materials li{
+  font-size:16px;
+  margin-bottom:14px;
+  color:#555;
+}
+
+/* ================= GALLERY ================= */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+  margin-top:120px;
+}
+.gallery img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:16px;
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+  background: #0e0e0e;
+  color: #eaeaea;
+  padding: 80px 20px 30px;
+  font-family: "Playfair Display", serif;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 60px;
+}
+
+.footer-brand img {
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.footer-brand p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #bdbdbd;
+  max-width: 420px;
+}
+
+.footer-social a {
+  margin-right: 15px;
+  color: #9bd0b2;
+  text-decoration: none;
+}
+
+.footer-col h4 {
+  font-size: 17px;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.footer-col a {
+  display: block;
+  color: #bdbdbd;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-col a:hover {
+  color: #9bd0b2;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #bdbdbd;
+}
+
+.footer-locations {
+  max-width: 1300px;
+  margin: 50px auto 20px;
+  padding: 18px;
+  text-align: center;
+  background: #1a1a1a;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+  .highlights{grid-template-columns:1fr 1fr}
+  .office-type{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .footer-container{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .highlights{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr}
+  .hero-content h1{font-size:32px}
+}
+/* ================= HERO FIX ================= */
+.hero{
+  height: 80vh;               /* reduced from 100vh */
+  background:url("../assets/images/office/hero.jpg") center/cover no-repeat;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ================= SECTION FIX ================= */
+.section{
+  max-width:1200px;
+  margin:0 auto;
+  padding:80px 20px;          /* reduced from 120px */
+}
+
+/* ================= HIGHLIGHTS FIX ================= */
+.highlights{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+  margin-top:40px;            /* reduced */
+}
+
+/* ================= OFFICE TYPES FIX ================= */
+.office-type{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;                   /* reduced */
+  margin-top:80px;            /* reduced */
+  align-items:center;
+}
+
+.office-type img{
+  height:340px;               /* reduced */
+}
+
+/* ================= PROCESS FIX ================= */
+.process{
+  background:#f3f3f0;
+  border-radius:24px;
+  padding:50px;               /* reduced */
+  margin-top:80px;            /* reduced */
+}
+
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+  margin-top:30px;
+}
+
+/* ================= MATERIAL FIX ================= */
+.materials{
+  margin-top:80px;            /* reduced */
+}
+
+.materials ul{
+  margin-top:20px;
+}
+
+/* ================= GALLERY FIX ================= */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  margin-top:60px;            /* reduced */
+}
+
+.gallery img{
+  height:240px;               /* reduced */
+}
+
+/* ================= FOOTER GAP FIX ================= */
+.site-footer{
+  margin-top:60px;            /* prevents footer touching content */
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="../index.html">
+    <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
+  </a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Office Interior Design</h1>
+    <p>Designing workplaces that enhance productivity, reflect brand identity, and inspire performance.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section">
+  <h2>Professional Office Interior Design in Ahmedabad</h2>
+  <p>
+    A well-designed office is not just about aesthetics — it directly impacts employee productivity,
+    brand perception, workflow efficiency, and business growth.
+    At Pavan Interior Design, we specialize in creating intelligent office interiors
+    that balance functionality, comfort, and corporate identity.
+  </p>
+
+  <div class="highlights">
+    <div class="highlight">
+      <h4>Productivity Focused</h4>
+      <p>Optimized layouts that improve concentration, movement, and collaboration.</p>
+    </div>
+    <div class="highlight">
+      <h4>Brand-Oriented Design</h4>
+      <p>Office interiors aligned with your company’s values and visual identity.</p>
+    </div>
+    <div class="highlight">
+      <h4>Employee Comfort</h4>
+      <p>Ergonomic furniture, lighting, and acoustics for healthier workspaces.</p>
+    </div>
+    <div class="highlight">
+      <h4>Future Ready</h4>
+      <p>Scalable designs that adapt to business expansion and evolving needs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OFFICE TYPES -->
+<section class="section">
+
+  <div class="office-type">
+    <img src="../assets/images/office/corporate.jpg" alt="Corporate Office Interior">
+    <div>
+      <h3>Corporate Office Interiors</h3>
+      <p>
+        Structured, professional layouts with executive cabins, workstations,
+        meeting rooms, and reception areas designed for corporate efficiency and authority.
+      </p>
+    </div>
+  </div>
+
+  <div class="office-type">
+    <div>
+      <h3>Startup & Co-Working Spaces</h3>
+      <p>
+        Flexible, collaborative designs that encourage creativity, teamwork,
+        and rapid growth with cost-effective planning.
+      </p>
+    </div>
+    <img src="../assets/images/office/startup.jpg" alt="Startup Office Interior">
+  </div>
+
+  <div class="office-type">
+    <img src="../assets/images/office/executive.jpg" alt="Executive Office Interior">
+    <div>
+      <h3>Executive Cabins & Boardrooms</h3>
+      <p>
+        Premium finishes, acoustic control, and statement design elements
+        that reflect leadership and professionalism.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<!-- PROCESS -->
+<section class="section">
+  <div class="process">
+    <h2>Our Office Interior Design Process</h2>
+
+    <div class="process-grid">
+      <div class="process-step">
+        <h4>Requirement Analysis</h4>
+        <p>Understanding team size, operations, and future expansion plans.</p>
+      </div>
+      <div class="process-step">
+        <h4>Space Planning & 3D Design</h4>
+        <p>Layout planning with realistic 3D visuals and multiple revisions.</p>
+      </div>
+      <div class="process-step">
+        <h4>Material Finalization</h4>
+        <p>Selecting durable, professional-grade materials and finishes.</p>
+      </div>
+      <div class="process-step">
+        <h4>Execution & Handover</h4>
+        <p>Timely execution with quality checks and minimal business disruption.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATERIALS -->
+<section class="section">
+  <div class="materials">
+    <h2>Materials & Systems We Use</h2>
+    <ul>
+      <li>✔ Commercial-grade modular workstations & partitions</li>
+      <li>✔ Acoustic panels & soundproof meeting rooms</li>
+      <li>✔ Ergonomic chairs & height-adjustable desks</li>
+      <li>✔ Fire-rated boards, cable management & IT integration</li>
+      <li>✔ Energy-efficient lighting & false ceiling systems</li>
+    </ul>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section">
+  <h2>Our Office Interior Projects</h2>
+  <div class="gallery">
+    <img src="../assets/images/office/gallery1.jpg" alt="">
+    <img src="../assets/images/office/gallery2.jpg" alt="">
+    <img src="../assets/images/office/gallery3.jpg" alt="">
+    <img src="../assets/images/office/gallery4.jpg" alt="">
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
+      <p>
+        Crafting timeless interiors with precision, transparency, and design excellence
+        across residential and commercial spaces.
+      </p>
+      <div class="footer-social">
+        <a href="https://wa.me/918980531520" target="_blank">WhatsApp</a>
+        <a href="mailto:info@pavaninterior.com">Email</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="../index.html">Home</a>
+      <a href="../folders/work.html">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../folders/pricing.html">Pricing</a>
+      <a href="../book-consultation.html">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="home-interior.html">Home Interior</a>
+      <a href="modular-kitchen.html">Modular Kitchen</a>
+      <a href="office-interior.html">Office Interior</a>
+      <a href="#">Architecture Consulting</a>
+      <a href="#">Turnkey Solutions</a>
+      <a href="#">Packages</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <p>+91 89805 31520</p>
+      <p>info@pavaninterior.com</p>
+      <p>
+        202, Aaron Spectra, Rajpath Rangoli Rd,<br>
+        Near Rajpath Club, Bodakdev,<br>
+        Ahmedabad, Gujarat 380054
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer-locations">
+    Ahmedabad · Gandhinagar · Rajkot · Surat · Vadodara · Pune · Hyderabad · Bangalore · Thane · Goregaon East
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Pavan Interior Design. All Rights Reserved.
+  </div>
+</footer>
+
+</body>
+</html>

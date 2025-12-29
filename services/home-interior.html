@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Interior Design | Pavan Interior Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- MAIN CSS (same as index) -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    body {
+      font-family: "Playfair Display", serif;
+      background: #f9f9f7;
+      color: #1a1a1a;
+    }
+
+    /* HEADER – LOGO ONLY */
+    .simple-header {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .simple-header img {
+      height: 90px;
+    }
+
+    /* PAGE WRAPPER */
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 20px 120px;
+    }
+
+    .page h1 {
+      font-size: 44px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .page-intro {
+      font-size: 18px;
+      line-height: 1.8;
+      max-width: 900px;
+      margin: 0 auto 80px;
+      text-align: center;
+      color: #444;
+    }
+
+    /* IMAGE SECTION */
+    .image-section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin: 80px 0;
+    }
+
+    .image-box {
+      height: 260px;
+      background: #ddd;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* CONTENT BLOCKS */
+    .content-block {
+      margin-bottom: 90px;
+    }
+
+    .content-block h2 {
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .content-block p {
+      font-size: 17px;
+      line-height: 1.9;
+      color: #444;
+      margin-bottom: 18px;
+    }
+
+    /* PROCESS */
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .process-step {
+      background: #ffffff;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .process-step h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .process-step p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .image-section {
+        grid-template-columns: 1fr;
+      }
+      .process {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .site-footer {
+  background: #0e0e0e;
+  color: #eaeaea;
+  padding: 80px 20px 30px;
+  font-family: "Playfair Display", serif;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 60px;
+}
+
+.footer-brand img {
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.footer-brand p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #bdbdbd;
+  max-width: 420px;
+}
+
+.footer-social {
+  margin-top: 20px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 14px;
+  color: #9bd0b2;
+  text-decoration: none;
+}
+
+.footer-col h4 {
+  font-size: 17px;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.footer-col a {
+  display: block;
+  color: #bdbdbd;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-col a:hover {
+  color: #9bd0b2;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #bdbdbd;
+}
+
+.footer-locations {
+  max-width: 1300px;
+  margin: 50px auto 20px;
+  padding: 18px;
+  text-align: center;
+  background: #1a1a1a;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="simple-header">
+  <a href="../index.html">
+    <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
+  </a>
+</header>
+
+<!-- PAGE CONTENT -->
+<section class="page">
+
+  <h1>Home Interior Design</h1>
+
+  <p class="page-intro">
+    A home is not just a space — it is a reflection of your lifestyle, values,
+    and everyday comfort. At <strong>Pavan Interior Design</strong>, we craft
+    thoughtfully planned home interiors that balance aesthetics, functionality,
+    and long-term durability — without unnecessary complexity.
+  </p>
+
+  <!-- IMAGE PLACEHOLDER SECTION -->
+  <div class="image-section">
+    <div class="image-box">Living Room Image</div>
+    <div class="image-box">Bedroom Image</div>
+    <div class="image-box">Kitchen Image</div>
+  </div>
+
+  <!-- WHAT WE DO -->
+  <div class="content-block">
+    <h2>What We Do for Your Home</h2>
+    <p>
+      Our home interior services are designed to cover every aspect of your living
+      space — from layout planning and material selection to execution and final handover.
+      Whether it is a compact apartment or a premium villa, our approach remains
+      detail-oriented and client-focused.
+    </p>
+    <p>
+      We work across living rooms, bedrooms, kitchens, wardrobes, ceilings,
+      lighting, storage solutions, and custom furniture — ensuring that every
+      element works together as a cohesive whole.
+    </p>
+  </div>
+
+  <!-- PROCESS -->
+  <div class="content-block">
+    <h2>Our Home Interior Process</h2>
+
+    <div class="process">
+      <div class="process-step">
+        <h4>1. Requirement & Estimate</h4>
+        <p>
+          We begin by understanding your needs, lifestyle, and space dimensions.
+          Based on carpet area, layout, and scope, we provide a clear and realistic
+          budget estimate — with no hidden assumptions.
+        </p>
+      </div>
+
+      <div class="process-step">
+        <h4>2. 3D Design & Visualisation</h4>
+        <p>
+          Detailed 3D designs are created so you can visualise your home before execution.
+          We refine layouts, colours, finishes, and materials until the design truly
+          reflects your preferences.
+        </p>
+      </div>
+
+      <div class="process-step">
+        <h4>3. Material Finalisation</h4>
+        <p>
+          Once designs are approved, we finalise materials, hardware, finishes,
+          and specifications — ensuring transparency in brands, quality, and pricing.
+        </p>
+      </div>
+
+      <div class="process-step">
+        <h4>4. Execution & Handover</h4>
+        <p>
+          Our team manages execution with regular supervision, quality checks,
+          and timeline control. The result is a home delivered as promised —
+          clean, finished, and ready to live in.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DESIGN PHILOSOPHY -->
+  <div class="content-block">
+    <h2>Our Design Philosophy for Homes</h2>
+    <p>
+      We believe great home interiors should feel effortless. Our designs prioritise
+      comfort, circulation, storage efficiency, and natural light — while maintaining
+      a timeless visual language.
+    </p>
+    <p>
+      From modern minimal to warm contemporary, we tailor each home to the people
+      living in it — not to trends that fade with time.
+    </p>
+  </div>
+
+  <!-- TRUST -->
+  <div class="content-block">
+    <h2>Built on Trust & Client Satisfaction</h2>
+    <p>
+      Our growth as a company has come from long-term client relationships,
+      repeat work, and referrals — not shortcuts. Every project is handled with
+      structured workflows, accountability, and respect for your investment.
+    </p>
+    <p>
+      For us, a successful home interior is one where the client feels confident,
+      informed, and satisfied — from the first meeting to years after handover.
+    </p>
+  </div>
+
+  <div class="content-block">
+  <h2>Materials We Use — Quality Without Compromise</h2>
+
+  <p>
+    The longevity of a home interior depends largely on the materials used behind
+    the finish. At Pavan Interior Design, we prioritise durability, safety, and
+    long-term performance over short-term cost cutting.
+  </p>
+
+  <p>
+    Based on project scope and budget, we work with a carefully selected range of
+    materials — always explaining the pros, lifespan, and maintenance of each
+    option before finalisation.
+  </p>
+
+  <ul style="margin-top:20px; line-height:1.9; color:#444;">
+    <li><strong>Plywood:</strong> BWP & MR grade plywood from trusted manufacturers for moisture resistance and strength.</li>
+    <li><strong>MDF & HDHMR:</strong> Used selectively for shutters and decorative elements where smooth finishes are required.</li>
+    <li><strong>Hardware:</strong> Soft-close channels, hinges, and fittings from reliable brands to ensure silent and long-lasting usage.</li>
+    <li><strong>Finishes:</strong> Laminates, veneers, acrylics, PU paint, and textured finishes based on design intent.</li>
+    <li><strong>Countertops:</strong> Granite, quartz, and engineered stone chosen for durability and ease of maintenance.</li>
+  </ul>
+</div>
+
+<div class="content-block">
+  <h2>Execution Standards & On-Site Quality Control</h2>
+
+  <p>
+    Design alone does not create a great home — disciplined execution does.
+    Our projects are managed through structured workflows with regular
+    supervision at every stage.
+  </p>
+
+  <p>
+    Each home interior project follows a step-by-step execution checklist,
+    ensuring alignment with approved drawings, material specifications,
+    and finishing standards.
+  </p>
+
+  <ul style="margin-top:20px; line-height:1.9; color:#444;">
+    <li>Dedicated site supervision during carpentry, installation, and finishing stages</li>
+    <li>Material verification before installation</li>
+    <li>Precision measurements to avoid gaps, misalignment, or rework</li>
+    <li>Clean handover with functional checks of shutters, drawers, and fittings</li>
+  </ul>
+</div>
+
+<div class="content-block">
+  <h2>Clear Pricing & Transparent Scope</h2>
+
+  <p>
+    One of the most common concerns homeowners face is unclear pricing.
+    We address this upfront with defined scopes and honest cost breakdowns.
+  </p>
+
+  <p>
+    Our estimates are prepared based on carpet area, module requirements,
+    material selection, and execution complexity — not vague per-room assumptions.
+  </p>
+
+  <p>
+    Any changes during the design stage are discussed and approved before
+    execution begins, ensuring there are no surprises later.
+  </p>
+</div>
+
+<div class="content-block">
+  <h2>Project Timelines & Delivery Discipline</h2>
+
+  <p>
+    Timely delivery is as important as design quality.
+    We plan execution schedules based on scope, material lead times,
+    and site readiness — not unrealistic promises.
+  </p>
+
+  <p>
+    Clients are kept informed of progress milestones, ensuring clarity
+    from the first day of execution to final handover.
+  </p>
+
+  <ul style="margin-top:20px; line-height:1.9; color:#444;">
+    <li>Defined execution timelines before work begins</li>
+    <li>Coordination between design, procurement, and site teams</li>
+    <li>Reduced delays through pre-planned material sourcing</li>
+  </ul>
+</div>
+
+<div class="content-block">
+  <h2>Designed for Daily Living & Long-Term Use</h2>
+
+  <p>
+    A home interior should not only look good on day one —
+    it should perform well for years.
+  </p>
+
+  <p>
+    Our design decisions consider daily usage patterns, storage load,
+    cleaning ease, and wear over time. This ensures that your interiors
+    remain functional and visually consistent long after handover.
+  </p>
+
+  <p>
+    Even after completion, we remain accessible for guidance,
+    minor adjustments, and support wherever required.
+  </p>
+</div>
+
+<div class="content-block">
+  <h2>Why Homeowners Choose Pavan Interior Design</h2>
+
+  <ul style="margin-top:20px; line-height:1.9; color:#444;">
+    <li>Process-driven execution, not ad-hoc decisions</li>
+    <li>Clear communication from design to handover</li>
+    <li>Balanced approach between aesthetics and practicality</li>
+    <li>Respect for client budgets and timelines</li>
+    <li>Focus on satisfaction, not just completion</li>
+  </ul>
+</div>
+
+</section>
+
+<!-- FOOTER  -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
+      <p>
+        Crafting timeless interiors with precision, transparency, and design excellence
+        across residential and commercial spaces.
+      </p>
+
+      <div class="footer-social">
+        <a href="https://wa.me/918980531520" target="_blank">WhatsApp</a>
+        <a href="mailto:info@pavaninterior.com">Email</a>
+      </div>
+    </div>
+
+    <!-- COMPANY -->
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="../index.html">Home</a>
+      <a href="../folders/work.html">Work</a>
+      <a href="../folders/about.html">About</a>
+      <a href="../folders/pricing.html">Pricing</a>
+      <a href="../book-consultation.html">Contact</a>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#home_interior">Home Interior</a>
+      <a href="#services">Modular Kitchen</a>
+      <a href="#services">Office Interior</a>
+      <a href="#services">Architecture Consulting</a>
+      <a href="#services">Turnkey Solutions</a>
+      <a href="#services">Packages</a>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <p>+91 89805 31520</p>
+      <p>info@pavaninterior.com</p>
+      <p>
+        202, Aaron Spectra, Rajpath Rangoli Rd,<br>
+        Near Rajpath Club, Bodakdev,<br>
+        Ahmedabad, Gujarat 380054
+      </p>
+    </div>
+
+  </div>
+
+  <!-- LOCATIONS -->
+  <div class="footer-locations">
+    Ahmedabad · Gandhinagar · Rajkot · Surat · Vadodara · Pune · Hyderabad · Bangalore · Thane · Goregaon East
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="footer-bottom">
+    © 2025 Pavan Interior Design. All Rights Reserved.
+  </div>
+</footer>
+
+</body>
+</html>

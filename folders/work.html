@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Work | Pavan Interior Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- INTERNAL CSS ONLY -->
+  <style>
+    body {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      background: transparent;
+      color: #1a1a1a;
+      position: relative;
+      z-index: 1;
+    }
+
+    
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: 
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("../assets/images/work/work.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    /* HEADER */
+    header {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header img {
+      height: 90px;
+    }
+
+    /* VIDEO SECTION */
+    .video-section {
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .video-section video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* OVERLAY TEXT */
+    .video-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .video-overlay h1 {
+      font-size: 42px;
+      letter-spacing: 1px;
+    }
+
+    /* WORK GRID */
+    .work-section {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .work-title {
+      text-align: center;
+      margin-bottom: 50px;
+      color: #fff;
+    }
+
+    .work-title h2 {
+      font-size: 34px;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+
+    .work-card {
+      background: rgba(255,255,255,0.95);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease;
+    }
+
+    .work-card:hover {
+      transform: translateY(-6px);
+    }
+
+    /* IMAGE PLACEHOLDER */
+    .work-image {
+      height: 160px;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      color: #666;
+    }
+
+    .work-info {
+      padding: 15px;
+    }
+
+    .work-info h4 {
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .work-info p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1000px) {
+      .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .video-overlay h1 {
+        font-size: 28px;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .site-footer {
+  background: #0e0e0e;
+  color: #eaeaea;
+  padding: 80px 20px 30px;
+  font-family: "Playfair Display", serif;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 60px;
+}
+
+.footer-brand img {
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.footer-brand p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #bdbdbd;
+  max-width: 420px;
+}
+
+.footer-social {
+  margin-top: 20px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 14px;
+  color: #9bd0b2;
+  text-decoration: none;
+}
+
+.footer-col h4 {
+  font-size: 17px;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.footer-col a {
+  display: block;
+  color: #bdbdbd;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-col a:hover {
+  color: #9bd0b2;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #bdbdbd;
+}
+
+.footer-locations {
+  max-width: 1300px;
+  margin: 50px auto 20px;
+  padding: 18px;
+  text-align: center;
+  background: #1a1a1a;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER WITH LOGO (BACK TO HOME) -->
+<header>
+  <a href="../index.html">
+    <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
+  </a>
+</header>
+
+<!-- VIDEO SECTION -->
+<section class="video-section">
+  <video autoplay muted loop playsinline>
+    <source src="../assets/images/videos/work-showcase.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="video-overlay">
+    <h1>Our Craft. Our Work.</h1>
+  </div>
+</section>
+
+<!-- WORK SHOWCASE -->
+<section class="work-section">
+  <div class="work-title">
+    <h2>Selected Interior Projects</h2>
+  </div>
+
+  <div class="work-grid">
+
+    <div class="work-card">
+      <div class="work-image">Project Image</div>
+      <div class="work-info">
+        <h4>Luxury Apartment Interior</h4>
+        <p>Ahmedabad · Residential</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-image">Project Image</div>
+      <div class="work-info">
+        <h4>Modern Villa Design</h4>
+        <p>Shivalik · Turnkey</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-image">Project Image</div>
+      <div class="work-info">
+        <h4>Heritage Home Renovation</h4>
+        <p>Jaisalmer · Restoration</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-image">Project Image</div>
+      <div class="work-info">
+        <h4>Corporate Office Interior</h4>
+        <p>Commercial · Ahmedabad</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-image">Project Image</div>
+      <div class="work-info">
+        <h4>Contemporary 3BHK Home</h4>
+        <p>Urban Living · Interior</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
+      <p>
+        Crafting timeless interiors with precision, transparency, and design excellence
+        across residential and commercial spaces.
+      </p>
+
+      <div class="footer-social">
+        <a href="https://wa.me/918980531520" target="_blank">WhatsApp</a>
+        <a href="mailto:info@pavaninterior.com">Email</a>
+      </div>
+    </div>
+
+    <!-- COMPANY -->
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="../index.html">Home</a>
+      <a href="../folders/work.html">Work</a>
+      <a href="../folders/about.html">About</a>
+      <a href="../folders/pricing.html">Pricing</a>
+      <a href="../book-consultation.html">Contact</a>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#home_interior">Home Interior</a>
+      <a href="#services">Modular Kitchen</a>
+      <a href="#services">Office Interior</a>
+      <a href="#services">Architecture Consulting</a>
+      <a href="#services">Turnkey Solutions</a>
+      <a href="#services">Packages</a>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <p>+91 89805 31520</p>
+      <p>info@pavaninterior.com</p>
+      <p>
+        202, Aaron Spectra, Rajpath Rangoli Rd,<br>
+        Near Rajpath Club, Bodakdev,<br>
+        Ahmedabad, Gujarat 380054
+      </p>
+    </div>
+
+  </div>
+
+  <!-- LOCATIONS -->
+  <div class="footer-locations">
+    Ahmedabad · Gandhinagar · Rajkot · Surat · Vadodara · Pune · Hyderabad · Bangalore · Thane · Goregaon East
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="footer-bottom">
+    © 2025 Pavan Interior Design. All Rights Reserved.
+  </div>
+</footer>
+</body>
+</html>

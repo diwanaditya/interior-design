@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interior Cost Calculator | Pavan Interior Design</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:"Playfair Display",serif;
+  background:transparent;
+  color:#1a1a1a;
+  position:relative;
+  z-index:1;
+}
+
+/* 🔥 FULL PAGE FIXED BACKGROUND IMAGE */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
+    url("../assets/images/price/price.jpg"); /* 🔽 ADD IMAGE PATH */
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  z-index:-1;
+}
+
+/* HEADER */
+header{
+  background:#fff;
+  padding:25px;
+  text-align:center;
+  box-shadow:0 2px 12px rgba(0,0,0,.06)
+}
+header img{height:80px}
+
+/* LAYOUT */
+.container{
+  max-width:900px;
+  margin:50px auto 80px;
+  padding:0 20px
+}
+h1{text-align:center;font-size:42px;color:#c0392b;margin-bottom:10px}
+.subtitle{text-align:center;color:#555;margin-bottom:40px}
+
+/* CARD */
+.card{
+  background:#fff;
+  padding:45px;
+  border-radius:20px;
+  box-shadow:0 25px 60px rgba(0,0,0,.1)
+}
+
+/* PROGRESS */
+.progress{
+  height:6px;
+  background:#eee;
+  border-radius:10px;
+  overflow:hidden;
+  margin-bottom:40px
+}
+.progress span{
+  display:block;
+  height:100%;
+  width:0%;
+  background:#c0392b;
+  transition:.4s
+}
+
+/* STEPS */
+.step{display:none}
+.step.active{display:block}
+.step h2{font-size:28px;margin-bottom:10px}
+.step p{color:#777;margin-bottom:25px}
+
+/* OPTIONS */
+.options{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px
+}
+.option{
+  border:2px solid #eee;
+  border-radius:16px;
+  padding:25px;
+  cursor:pointer;
+  text-align:center;
+  transition:.3s
+}
+.option:hover,
+.option.selected{
+  border-color:#c0392b;
+  background:#fff5f3;
+  transform:translateY(-4px)
+}
+.option h4{margin-bottom:8px}
+.option small{color:#666}
+
+/* INPUT */
+input{
+  width:100%;
+  padding:16px;
+  border-radius:12px;
+  border:2px solid #ddd;
+  font-size:16px
+}
+
+/* BUTTONS */
+.buttons{
+  display:flex;
+  gap:15px;
+  margin-top:35px
+}
+button{
+  flex:1;
+  padding:16px;
+  border:none;
+  border-radius:12px;
+  font-size:17px;
+  font-weight:600;
+  cursor:pointer
+}
+.primary{background:#c0392b;color:#fff}
+.secondary{background:#eee}
+.primary:hover{background:#a93226}
+
+/* RESULT */
+.result{
+  background:#f3f3f0;
+  padding:30px;
+  border-radius:16px;
+  margin-top:30px
+}
+.total{
+  background:#c0392b;
+  color:#fff;
+  padding:30px;
+  border-radius:18px;
+  text-align:center;
+  margin-top:20px
+}
+.total h3{font-size:40px;margin:10px 0}
+.note{font-size:13px;opacity:.85}
+
+/* MOBILE */
+@media(max-width:600px){
+  h1{font-size:32px}
+  .card{padding:30px}
+}
+.site-footer {
+  background: #0e0e0e;
+  color: #eaeaea;
+  padding: 80px 20px 30px;
+  font-family: "Playfair Display", serif;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 60px;
+}
+
+.footer-brand img {
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.footer-brand p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #bdbdbd;
+  max-width: 420px;
+}
+
+.footer-social {
+  margin-top: 20px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 14px;
+  color: #9bd0b2;
+  text-decoration: none;
+}
+
+.footer-col h4 {
+  font-size: 17px;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.footer-col a {
+  display: block;
+  color: #bdbdbd;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-col a:hover {
+  color: #9bd0b2;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #bdbdbd;
+}
+
+.footer-locations {
+  max-width: 1300px;
+  margin: 50px auto 20px;
+  padding: 18px;
+  text-align: center;
+  background: #1a1a1a;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="/index.html">
+    <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
+  </a>
+</header>
+
+<div class="container">
+  <h1>Interior Cost Calculator</h1>
+  <p class="subtitle">Instant Ahmedabad-based estimate in 60 seconds</p>
+
+  <div class="card">
+
+    <div class="progress"><span id="bar"></span></div>
+
+    <!-- STEP 1 -->
+    <div class="step active" id="s1">
+      <h2>What do you want to design?</h2>
+      <p>Select your project type</p>
+
+      <div class="options">
+        <div class="option" onclick="selectProject('full',this)">
+          <h4>Full Home Interior</h4>
+          <small>Complete turnkey solution</small>
+        </div>
+        <div class="option" onclick="selectProject('rooms',this)">
+          <h4>Specific Rooms</h4>
+          <small>Bedroom, living, etc.</small>
+        </div>
+        <div class="option" onclick="selectProject('kitchen',this)">
+          <h4>Modular Kitchen</h4>
+          <small>Kitchen only</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step" id="s2">
+      <h2>Home Size</h2>
+      <p>Select configuration or enter area</p>
+
+      <div class="options">
+        <div class="option" onclick="setArea(650,this)">1 BHK (~650 sq ft)</div>
+        <div class="option" onclick="setArea(950,this)">2 BHK (~950 sq ft)</div>
+        <div class="option" onclick="setArea(1400,this)">3 BHK (~1400 sq ft)</div>
+        <div class="option" onclick="customArea(this)">Custom Size</div>
+      </div>
+
+      <div id="customInput" style="display:none;margin-top:20px">
+        <input type="number" id="areaInput" placeholder="Enter carpet area (sq ft)">
+      </div>
+
+      <div class="buttons">
+        <button class="secondary" onclick="back(1)">Back</button>
+        <button class="primary" onclick="next(3)">Next</button>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step" id="s3">
+      <h2>Quality Level</h2>
+      <p>Choose your interior finish</p>
+
+      <div class="options">
+        <div class="option" onclick="setQuality('basic',1100,this)">
+          <h4>Basic</h4>
+          <small>₹900–1200 / sq ft</small>
+        </div>
+        <div class="option" onclick="setQuality('mid',1650,this)">
+          <h4>Mid Range</h4>
+          <small>₹1400–1900 / sq ft</small>
+        </div>
+        <div class="option" onclick="setQuality('premium',2600,this)">
+          <h4>Premium</h4>
+          <small>₹2000+ / sq ft</small>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="secondary" onclick="back(2)">Back</button>
+        <button class="primary" onclick="calculate()">Calculate</button>
+      </div>
+    </div>
+
+    <!-- RESULT -->
+    <div class="step" id="result">
+      <h2>Your Estimated Budget</h2>
+
+      <div class="result" id="summary"></div>
+
+      <div class="total">
+        <div>Estimated Cost</div>
+        <h3 id="totalPrice">₹0</h3>
+        <div class="note">
+          Approximate Ahmedabad pricing. Final cost may vary by materials & scope.
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="secondary" onclick="location.reload()">Start Over</button>
+        <button class="primary" onclick="location.href='../book-consultation.html'">
+          Talk to Designer
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+let data={project:null,area:0,quality:null,rate:0};
+function updateBar(p){document.getElementById('bar').style.width=p+'%'}
+function show(id){document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active')}
+function selectProject(type,el){data.project=type;document.querySelectorAll('#s1 .option').forEach(o=>o.classList.remove('selected'));el.classList.add('selected');updateBar(30);setTimeout(()=>show('s2'),300)}
+function setArea(val,el){data.area=val;document.getElementById('customInput').style.display='none';document.querySelectorAll('#s2 .option').forEach(o=>o.classList.remove('selected'));el.classList.add('selected')}
+function customArea(el){document.querySelectorAll('#s2 .option').forEach(o=>o.classList.remove('selected'));el.classList.add('selected');document.getElementById('customInput').style.display='block'}
+function next(){if(document.getElementById('areaInput').value){data.area=parseInt(document.getElementById('areaInput').value)}if(!data.area){alert('Please select or enter area');return}updateBar(60);show('s3')}
+function setQuality(q,rate,el){data.quality=q;data.rate=rate;document.querySelectorAll('#s3 .option').forEach(o=>o.classList.remove('selected'));el.classList.add('selected')}
+function calculate(){if(!data.quality){alert('Select quality');return}let total=data.area*data.rate;updateBar(100);document.getElementById('summary').innerHTML=`<p><b>Project:</b> ${data.project}</p><p><b>Area:</b> ${data.area} sq ft</p><p><b>Quality:</b> ${data.quality}</p>`;document.getElementById('totalPrice').innerText='₹ '+total.toLocaleString('en-IN');show('result')}
+function back(step){show('s'+step)}
+</script>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
+      <p>
+        Crafting timeless interiors with precision, transparency, and design excellence
+        across residential and commercial spaces.
+      </p>
+
+      <div class="footer-social">
+        <a href="https://wa.me/918980531520" target="_blank">WhatsApp</a>
+        <a href="mailto:info@pavaninterior.com">Email</a>
+      </div>
+    </div>
+
+    <!-- COMPANY -->
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="../index.html">Home</a>
+      <a href="../folders/work.html">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../folders/pricing.html">Pricing</a>
+      <a href="../book-consultation.html">Contact</a>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#home_interior">Home Interior</a>
+      <a href="#services">Modular Kitchen</a>
+      <a href="#services">Office Interior</a>
+      <a href="#services">Architecture Consulting</a>
+      <a href="#services">Turnkey Solutions</a>
+      <a href="#services">Packages</a>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <p>+91 89805 31520</p>
+      <p>info@pavaninterior.com</p>
+      <p>
+        202, Aaron Spectra, Rajpath Rangoli Rd,<br>
+        Near Rajpath Club, Bodakdev,<br>
+        Ahmedabad, Gujarat 380054
+      </p>
+    </div>
+
+  </div>
+
+  <!-- LOCATIONS -->
+  <div class="footer-locations">
+    Ahmedabad · Gandhinagar · Rajkot · Surat · Vadodara · Pune · Hyderabad · Bangalore · Thane · Goregaon East
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="footer-bottom">
+    © 2025 Pavan Interior Design. All Rights Reserved.
+  </div>
+</footer>
+
+</body>
+</html>
