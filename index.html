@@ -534,7 +534,23 @@
 
 
 <script src="js/hero-slider.js"></script>
+<script>
+  function openMobileMenu() {
+    document.getElementById("mobileMenu").classList.add("active");
+    document.body.style.overflow = "hidden"; // stop background scroll
+  }
 
+  function closeMobileMenu() {
+    document.getElementById("mobileMenu").classList.remove("active");
+    document.body.style.overflow = ""; // restore scroll
+  }
+
+  // Close menu when clicking outside nav
+  document.getElementById("mobileMenu")?.addEventListener("click", function (e) {
+    if (e.target === this) closeMobileMenu();
+  });
+</script>
+  
 <script>
 document.querySelectorAll('.faq-question').forEach(btn => {
   btn.addEventListener('click', () => {
