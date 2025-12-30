@@ -11,180 +11,173 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:"Playfair Display",serif;
-  background:#f8f8f6;
-  color:#1a1a1a;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* HEADER */
-header{
-  padding:26px 20px;
-  text-align:center;
-}
-header img{
-  height:80px;
+body {
+  font-family: "Playfair Display", serif;
+  background: #f8f8f6;
+  color: #1a1a1a;
 }
 
-/* HERO */
-.hero{
-  padding:95px 20px 65px;
-  background:#ffffff;
-  text-align:center;
+/* ================= HEADER ================= */
+header {
+  padding: 26px 20px;
+  text-align: center;
 }
-.hero h1{
-  font-size:42px;
-  margin-bottom:14px;
-}
-.hero p{
-  font-size:18px;
-  max-width:900px;
-  margin:auto;
-  color:#555;
-  line-height:1.8;
+header img {
+  height: 80px;
 }
 
-/* CONTENT */
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:60px 20px;
+/* ================= HERO ================= */
+.hero {
+  padding: 95px 20px 65px;
+  background: #ffffff;
+  text-align: center;
 }
-.section{
-  margin-bottom:55px;
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 14px;
 }
-.section h2{
-  font-size:34px;
-  margin-bottom:14px;
-}
-.section p{
-  font-size:16px;
-  line-height:1.9;
-  color:#444;
-  max-width:1000px;
+.hero p {
+  font-size: 18px;
+  max-width: 900px;
+  margin: auto;
+  color: #555;
+  line-height: 1.8;
 }
 
-/* FEATURES */
-.features{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:26px;
-  margin-top:30px;
+/* ================= LAYOUT ================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
 }
-.feature-box{
-  background:#ffffff;
-  padding:28px;
-  border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+.section {
+  margin-bottom: 60px;
 }
-.feature-box h4{
-  font-size:18px;
-  margin-bottom:10px;
+.section h2 {
+  font-size: 34px;
+  margin-bottom: 14px;
 }
-.feature-box p{
-  font-size:14px;
-  line-height:1.7;
-  color:#555;
+.section p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #444;
+  max-width: 1000px;
 }
 
-/* PROCESS */
-.process{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:24px;
-  margin-top:32px;
+/* ================= PROCESS ================= */
+.process {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 32px;
 }
-.process-box{
-  background:#ffffff;
-  padding:26px;
-  border-radius:16px;
-  box-shadow:0 8px 25px rgba(0,0,0,0.05);
+.process-box {
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
 }
-.process-box h4{
-  font-size:17px;
-  margin-bottom:8px;
+.process-box h4 {
+  font-size: 17px;
+  margin-bottom: 8px;
 }
-.process-box p{
-  font-size:14px;
-  color:#555;
-  line-height:1.7;
-}
-
-/* IMAGE GRID */
-.image-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-  margin-top:30px;
-}
-.image-box{
-  height:260px;
-  background:#ddd;
-  border-radius:14px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:14px;
-  color:#666;
+.process-box p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
 }
 
-/* TECH LIST */
-.tech{
-  background:#ffffff;
-  padding:56px;
-  border-radius:22px;
-}
-.tech ul{
-  list-style:none;
-}
-.tech li{
-  font-size:16px;
-  line-height:1.9;
-  margin-bottom:12px;
-  padding-left:18px;
-  position:relative;
-}
-.tech li::before{
-  content:"•";
-  position:absolute;
-  left:0;
-  color:#9bd0b2;
-  font-size:20px;
+/* ================= IMAGE GRID (FIXED) ================= */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 40px;
 }
 
-/* CTA */
-.cta{
-  background:#1a1a1a;
-  color:#ffffff;
-  padding:70px 20px;
-  text-align:center;
-}
-.cta h3{
-  font-size:32px;
-  margin-bottom:14px;
-}
-.cta p{
-  font-size:17px;
-  max-width:780px;
-  margin:auto;
-  opacity:0.9;
-}
-.cta a{
-  display:inline-block;
-  margin-top:26px;
-  padding:14px 34px;
-  border:1px solid #ffffff;
-  color:#ffffff;
-  text-decoration:none;
-  letter-spacing:1px;
-}
-.cta a:hover{
-  background:#ffffff;
-  color:#000;
+.image-box {
+  width: 100%;
+  height: 260px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f1f1f1;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* FOOTER */
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 50px rgba(0,0,0,0.16);
+}
+
+/* ================= TECHNOLOGY ================= */
+.tech {
+  background: #ffffff;
+  padding: 56px;
+  border-radius: 22px;
+}
+.tech ul {
+  list-style: none;
+}
+.tech li {
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 12px;
+  padding-left: 18px;
+  position: relative;
+}
+.tech li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #9bd0b2;
+  font-size: 20px;
+}
+
+/* ================= CTA ================= */
+.cta {
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 70px 20px;
+  text-align: center;
+}
+.cta h3 {
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+.cta p {
+  font-size: 17px;
+  max-width: 780px;
+  margin: auto;
+  opacity: 0.9;
+}
+.cta a {
+  display: inline-block;
+  margin-top: 26px;
+  padding: 14px 34px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+}
+.cta a:hover {
+  background: #ffffff;
+  color: #000;
+}
+
+/* ================= FOOTER ================= */
 .site-footer {
   background: #0e0e0e;
   color: #eaeaea;
@@ -206,97 +199,55 @@ header img{
   line-height: 1.7;
   color: #bdbdbd;
 }
-.footer-social a {
-  display:inline-block;
-  margin-right:15px;
-  color:#9bd0b2;
-  text-decoration:none;
-}
 .footer-col h4 {
   font-size: 17px;
   margin-bottom: 18px;
 }
 .footer-col a {
-  display:block;
-  color:#bdbdbd;
-  text-decoration:none;
-  margin-bottom:10px;
-  font-size:14px;
+  display: block;
+  color: #bdbdbd;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 .footer-locations {
-  margin:50px auto 20px;
-  padding:18px;
-  background:#1a1a1a;
-  text-align:center;
-  border-radius:10px;
-  font-size:14px;
+  margin: 50px auto 20px;
+  padding: 18px;
+  background: #1a1a1a;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 14px;
 }
 .footer-bottom {
-  text-align:center;
-  font-size:13px;
-  color:#888;
-  margin-top:20px;
-}
-
-  /* ================= IMAGE GRID FIX ================= */
-
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  margin-top: 40px;
-}
-
-.image-box {
-  width: 100%;
-  height: 260px;                 /* CONTROL HEIGHT */
-  border-radius: 14px;
-  overflow: hidden;              /* IMPORTANT */
-  background: #f1f1f1;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.image-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;             /* KEY FIX */
-  display: block;
-}
-
-/* Luxury hover */
-.image-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 50px rgba(0,0,0,0.16);
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin-top: 20px;
 }
 
 /* ================= RESPONSIVE ================= */
-
 @media (max-width: 900px) {
+  .process {
+    grid-template-columns: 1fr 1fr;
+  }
   .image-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 600px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+  .process {
+    grid-template-columns: 1fr;
+  }
   .image-grid {
     grid-template-columns: 1fr;
   }
-
   .image-box {
     height: 220px;
   }
-}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .features{grid-template-columns:1fr 1fr}
-  .process{grid-template-columns:1fr 1fr}
-  .image-grid{grid-template-columns:1fr}
-}
-@media(max-width:600px){
-  .hero h1{font-size:30px}
-  .features,.process{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -500,6 +451,7 @@ header img{
 
 </body>
 </html>
+
 
 
 
