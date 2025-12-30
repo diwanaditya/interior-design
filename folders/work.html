@@ -5,50 +5,48 @@
   <title>Our Work | Pavan Interior Design</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
+  <!-- GOOGLE FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- INTERNAL CSS ONLY -->
+  <!-- MAIN SITE CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- WORK PAGE ONLY CSS -->
   <style>
     body {
       margin: 0;
       font-family: "Playfair Display", serif;
-      background: transparent;
-      color: #1a1a1a;
-      position: relative;
-      z-index: 1;
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
     }
 
-    
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: 
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-        url("../assets/images/work/work.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      z-index: -1;
-    }
-
-    /* HEADER */
+    /* LOGO (APPEARS AFTER VIDEO STARTS) */
     header {
-      padding: 30px 20px;
+      position: fixed;
+      top: 22px;
+      width: 100%;
       text-align: center;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 1.2s ease, transform 1.2s ease;
+      z-index: 20;
+    }
+
+    header.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     header img {
       height: 90px;
     }
 
-    /* VIDEO SECTION */
+    /* FULLSCREEN VIDEO */
     .video-section {
-      width: 100%;
-      height: 70vh;
-      overflow: hidden;
+      height: 100vh;
       position: relative;
+      overflow: hidden;
     }
 
     .video-section video {
@@ -57,217 +55,117 @@
       object-fit: cover;
     }
 
-    /* OVERLAY TEXT */
     .video-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.35);
+      background: rgba(0,0,0,0.45);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
-      text-align: center;
     }
 
-    .video-overlay h1 {
-      font-size: 42px;
-      letter-spacing: 1px;
+    .typing-text {
+      font-size: 56px;
+      letter-spacing: 4px;
+      font-weight: 500;
+      border-right: 2px solid rgba(255,255,255,0.7);
+      padding-right: 10px;
+      white-space: nowrap;
     }
 
     /* WORK GRID */
     .work-section {
-      max-width: 1200px;
-      margin: 80px auto;
+      max-width: 1300px;
+      margin: 120px auto;
       padding: 0 20px;
     }
 
     .work-title {
       text-align: center;
-      margin-bottom: 50px;
-      color: #fff;
+      margin-bottom: 60px;
     }
 
     .work-title h2 {
-      font-size: 34px;
+      font-size: 38px;
+      color: #ffffff;
     }
 
     .work-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
     }
 
+    /* PROJECT CARD */
     .work-card {
-      background: rgba(255,255,255,0.95);
-      border-radius: 14px;
+      background: #ffffff;
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      transition: transform 0.4s ease;
+      color: #000;
+      text-decoration: none;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+      transition: transform 0.45s ease, box-shadow 0.45s ease;
     }
 
     .work-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.4);
     }
 
-    /* IMAGE PLACEHOLDER */
-    .work-image {
-      height: 160px;
-      background: #ddd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      color: #666;
+    .work-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
     }
 
     .work-info {
-      padding: 15px;
+      padding: 18px;
     }
 
     .work-info h4 {
-      font-size: 15px;
+      font-size: 17px;
       margin-bottom: 6px;
     }
 
     .work-info p {
-      font-size: 13px;
+      font-size: 14px;
       color: #666;
-      line-height: 1.4;
     }
 
     /* RESPONSIVE */
-    @media (max-width: 1000px) {
-      .work-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    @media (max-width: 1100px) {
+      .work-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 600px) {
-      .video-overlay h1 {
-        font-size: 28px;
-      }
-
-      .work-grid {
-        grid-template-columns: 1fr;
-      }
+      .typing-text { font-size: 32px; }
+      .work-grid { grid-template-columns: 1fr; }
     }
-    .site-footer {
-  background: #0e0e0e;
-  color: #eaeaea;
-  padding: 80px 20px 30px;
-  font-family: "Playfair Display", serif;
-}
-
-.footer-container {
-  max-width: 1300px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 60px;
-}
-
-.footer-brand img {
-  height: 70px;
-  margin-bottom: 20px;
-}
-
-.footer-brand p {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #bdbdbd;
-  max-width: 420px;
-}
-
-.footer-social {
-  margin-top: 20px;
-}
-
-.footer-social a {
-  display: inline-block;
-  margin-right: 15px;
-  font-size: 14px;
-  color: #9bd0b2;
-  text-decoration: none;
-}
-
-.footer-col h4 {
-  font-size: 17px;
-  margin-bottom: 18px;
-  color: #ffffff;
-}
-
-.footer-col a {
-  display: block;
-  color: #bdbdbd;
-  text-decoration: none;
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-
-.footer-col a:hover {
-  color: #9bd0b2;
-}
-
-.footer-col p {
-  font-size: 14px;
-  line-height: 1.7;
-  color: #bdbdbd;
-}
-
-.footer-locations {
-  max-width: 1300px;
-  margin: 50px auto 20px;
-  padding: 18px;
-  text-align: center;
-  background: #1a1a1a;
-  border-radius: 10px;
-  font-size: 14px;
-  color: #cccccc;
-}
-
-.footer-bottom {
-  text-align: center;
-  font-size: 13px;
-  color: #888;
-  margin-top: 20px;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .footer-brand p {
-    max-width: 100%;
-  }
-}
   </style>
 </head>
 
 <body>
 
-<!-- HEADER WITH LOGO (BACK TO HOME) -->
-<header>
+<!-- LOGO -->
+<header id="logoHeader">
   <a href="../index.html">
     <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
   </a>
 </header>
 
-<!-- VIDEO SECTION -->
+<!-- FULLSCREEN VIDEO INTRO -->
 <section class="video-section">
-  <video autoplay muted loop playsinline>
+  <video autoplay muted loop playsinline id="heroVideo">
     <source src="../assets/images/videos/work-showcase.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 
   <div class="video-overlay">
-    <h1>Our Craft. Our Work.</h1>
+    <div class="typing-text" id="typingText"></div>
   </div>
 </section>
 
-<!-- WORK SHOWCASE -->
+<!-- PROJECTS -->
 <section class="work-section">
   <div class="work-title">
     <h2>Selected Interior Projects</h2>
@@ -275,110 +173,110 @@
 
   <div class="work-grid">
 
-    <div class="work-card">
-      <div class="work-image">Project Image</div>
+    <!-- PROJECT 1 -->
+    <a href="projects/luxury-apartment.html" class="work-card">
+      <img src="../assets/images/work/luxury-apartment.jpg" alt="Luxury Apartment Interior Ahmedabad">
       <div class="work-info">
         <h4>Luxury Apartment Interior</h4>
         <p>Ahmedabad · Residential</p>
       </div>
-    </div>
+    </a>
 
-    <div class="work-card">
-      <div class="work-image">Project Image</div>
+    <!-- PROJECT 2 -->
+    <a href="projects/modern-villa.html" class="work-card">
+      <img src="../assets/images/work/modern-villa.jpg" alt="Modern Villa Interior">
       <div class="work-info">
         <h4>Modern Villa Design</h4>
-        <p>Shivalik · Turnkey</p>
+        <p>Turnkey · Gujarat</p>
       </div>
-    </div>
+    </a>
 
-    <div class="work-card">
-      <div class="work-image">Project Image</div>
-      <div class="work-info">
-        <h4>Heritage Home Renovation</h4>
-        <p>Jaisalmer · Restoration</p>
-      </div>
-    </div>
-
-    <div class="work-card">
-      <div class="work-image">Project Image</div>
+    <!-- PROJECT 3 -->
+    <a href="projects/corporate-office.html" class="work-card">
+      <img src="../assets/images/work/corporate-office.jpg" alt="Corporate Office Interior">
       <div class="work-info">
         <h4>Corporate Office Interior</h4>
         <p>Commercial · Ahmedabad</p>
       </div>
-    </div>
+    </a>
 
-    <div class="work-card">
-      <div class="work-image">Project Image</div>
+    <!-- PROJECT 4 -->
+    <a href="projects/heritage-home.html" class="work-card">
+      <img src="../assets/images/work/heritage-home.jpg" alt="Heritage Home Renovation">
       <div class="work-info">
-        <h4>Contemporary 3BHK Home</h4>
-        <p>Urban Living · Interior</p>
+        <h4>Heritage Home Renovation</h4>
+        <p>Restoration · India</p>
       </div>
-    </div>
+    </a>
 
   </div>
 </section>
-<!-- ================= FOOTER ================= -->
-<footer class="site-footer">
-  <div class="footer-container">
 
-    <!-- BRAND -->
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+
     <div class="footer-brand">
       <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
       <p>
-        Crafting timeless interiors with precision, transparency, and design excellence
-        across residential and commercial spaces.
+        Crafting timeless interiors with precision, transparency,
+        and design excellence across residential and commercial spaces.
       </p>
-
-      <div class="footer-social">
-        <a href="https://wa.me/918980531520" target="_blank">WhatsApp</a>
-        <a href="mailto:info@pavaninterior.com">Email</a>
-      </div>
     </div>
 
-    <!-- COMPANY -->
-    <div class="footer-col">
+    <div class="footer-column">
       <h4>Company</h4>
       <a href="../index.html">Home</a>
       <a href="../folders/work.html">Work</a>
-      <a href="../folders/about.html">About</a>
+      <a href="../about.html">About</a>
       <a href="../folders/pricing.html">Pricing</a>
       <a href="../book-consultation.html">Contact</a>
     </div>
 
-    <!-- SERVICES -->
-    <div class="footer-col">
+    <div class="footer-column">
       <h4>Services</h4>
-      <a href="#home_interior">Home Interior</a>
-      <a href="#services">Modular Kitchen</a>
-      <a href="#services">Office Interior</a>
-      <a href="#services">Architecture Consulting</a>
-      <a href="#services">Turnkey Solutions</a>
-      <a href="#services">Packages</a>
+      <a href="../services/home-interior.html">Home Interior</a>
+      <a href="../services/kitchen.html">Modular Kitchen</a>
+      <a href="../services/office-interior-design.html">Office Interior</a>
+      <a href="../services/turnkey-solution.html">Turnkey Solutions</a>
     </div>
 
-    <!-- CONTACT -->
-    <div class="footer-col">
-      <h4>Get in Touch</h4>
+    <div class="footer-column">
+      <h4>Contact</h4>
       <p>+91 89805 31520</p>
       <p>info@pavaninterior.com</p>
-      <p>
-        202, Aaron Spectra, Rajpath Rangoli Rd,<br>
-        Near Rajpath Club, Bodakdev,<br>
-        Ahmedabad, Gujarat 380054
-      </p>
+      <p>Bodakdev, Ahmedabad</p>
     </div>
 
   </div>
 
-  <!-- LOCATIONS -->
-  <div class="footer-locations">
-    Ahmedabad · Gandhinagar · Rajkot · Surat · Vadodara · Pune · Hyderabad · Bangalore · Thane · Goregaon East
-  </div>
-
-  <!-- COPYRIGHT -->
   <div class="footer-bottom">
     © 2025 Pavan Interior Design. All Rights Reserved.
   </div>
 </footer>
+
+<!-- TYPING + LOGO SCRIPT -->
+<script>
+  const text = "OUR CRAFT. OUR WORK.";
+  const typingEl = document.getElementById("typingText");
+  const logo = document.getElementById("logoHeader");
+  let i = 0;
+
+  function typeText() {
+    if (i < text.length) {
+      typingEl.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeText, 120);
+    }
+  }
+
+  document.getElementById("heroVideo").addEventListener("play", () => {
+    setTimeout(() => {
+      typeText();
+      logo.classList.add("show");
+    }, 800);
+  });
+</script>
+
 </body>
 </html>
