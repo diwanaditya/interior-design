@@ -1,148 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Our Team | Pavan Interior Design</title>
+<meta charset="UTF-8">
+<title>Our Work | Pavan Interior Design</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore our interior design projects across residential, commercial and hospitality spaces. Crafted with precision and executed with excellence.">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Meet the people behind Pavan Interior Design — a team driven by experience, craftsmanship, and a passion for creating refined interior spaces.">
+<!-- FAVICON -->
+<link rel="icon" href="../assets/images/favicon.png">
 
-  <!-- FAVICON -->
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-  <link rel="apple-touch-icon" href="../assets/images/favicon.png">
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- GOOGLE FONT -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ========== GLOBAL ========== */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  background: #000;
+  color: #fff;
+}
 
-  <!-- MAIN CSS -->
-  <link rel="stylesheet" href="../css/style.css">
+/* ========== HERO VIDEO ========== */
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.typing-text {
+  font-size: 56px;
+  letter-spacing: 4px;
+  border-right: 2px solid rgba(255,255,255,0.7);
+  padding-right: 12px;
+  white-space: nowrap;
+}
+
+/* ========== PREVIEW SECTION ========== */
+.preview-section {
+  padding: 120px 20px;
+  background: #000;
+}
+
+.preview-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.premium-title {
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.premium-divider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(to right,#c9a24d,#fff,#c9a24d);
+  margin: 18px auto 35px;
+}
+
+.premium-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.6);
+  color: #c9a24d;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  transition: 0.4s ease;
+}
+
+.premium-btn:hover {
+  background: #c9a24d;
+  color: #000;
+}
+
+/* ========== GRID ========== */
+.preview-grid {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 40px;
+}
+
+.preview-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  color: #000;
+  text-decoration: none;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  transition: 0.6s ease;
+}
+
+.preview-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 40px 90px rgba(0,0,0,0.6);
+}
+
+.preview-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.preview-card h5 {
+  margin: 18px 20px 6px;
+  font-size: 18px;
+}
+
+.preview-card span {
+  margin: 0 20px 22px;
+  display: block;
+  font-size: 14px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.preview-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ========== FOOTER ========== */
+.site-footer {
+  background: #0e0e0e;
+  padding: 80px 20px 30px;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 60px;
+}
+
+.footer-brand img {
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.footer-brand p {
+  color: #bdbdbd;
+  line-height: 1.7;
+}
+
+.footer-social a {
+  margin-right: 15px;
+  color: #9bd0b2;
+  text-decoration: none;
+}
+
+.footer-col h4 {
+  margin-bottom: 18px;
+}
+
+.footer-col a {
+  display: block;
+  color: #bdbdbd;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.footer-locations,
+.footer-bottom {
+  text-align: center;
+  color: #888;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1000px) {
+  .preview-grid { grid-template-columns: repeat(2,1fr); }
+  .typing-text { font-size: 40px; }
+}
+
+@media (max-width: 600px) {
+  .preview-grid { grid-template-columns: 1fr; }
+  .typing-text { font-size: 28px; letter-spacing: 2px; }
+}
+</style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="header">
-  <div class="header-inner">
-    <div class="logo">
-      <a href="../index.html">
-        <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
+<!-- HERO -->
+<section class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="../assets/images/videos/work-showcase.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-content">
+    <div class="typing-text" id="typingText"></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="preview-section">
+  <div class="preview-header">
+    <h3 class="premium-title">A Glimpse of Our Interior Projects</h3>
+    <div class="premium-divider"></div>
+    <a class="premium-btn" href="../index.html">Back to Home</a>
+  </div>
+
+  <div class="preview-grid">
+
+    <!-- COPY CARD & CHANGE IMAGE/TEXT -->
+    <div class="preview-card">
+      <a href="#">
+        <img src="../assets/images/project/satkar-premium.jpg">
+        <h5>Satkar Premium – Residential Interior</h5>
+        <span>Naroda, Ahmedabad</span>
       </a>
     </div>
-  </div>
-</header>
 
-<!-- ================= TEAM SECTION ================= -->
-<section class="team-section scroll-section">
-
-  <div class="team-overlay"></div>
-
-  <div class="team-container">
-
-    <h1 class="team-title fade-up">The People Behind Our Work</h1>
-
-    <p class="team-intro fade-up">
-      Every interior we create is shaped by the people behind it.
-      Our team brings together thoughtful design, strong execution,
-      and years of hands-on experience to deliver spaces that feel
-      refined, functional, and enduring.
-    </p>
-
-    <!-- ================= MEMBER 1 ================= -->
-    <div class="team-member fade-up">
-      <div class="member-image">
-        <img src="../assets/images/team/member1.jpg" alt="Pavan Balani">
-      </div>
-
-      <div class="member-info">
-        <h2>Pavan Balani</h2>
-        <h4>Founder</h4>
-
-        <p>
-          Pavan Balani is the founder of Pavan Interior Design and the
-          guiding force behind the studio’s design philosophy.
-          With over a decade of experience in the interior industry,
-          he has led the execution of residential, commercial,
-          and turnkey projects across India.
-        </p>
-
-        <p>
-          His approach is rooted in clarity, transparency, and attention
-          to detail — ensuring that every project is thoughtfully planned,
-          responsibly executed, and delivered exactly as envisioned.
-        </p>
-      </div>
+    <div class="preview-card">
+      <a href="#">
+        <img src="../assets/images/project/west-face.jpg">
+        <h5>West Face – Commercial Interior</h5>
+        <span>Thaltej, Ahmedabad</span>
+      </a>
     </div>
 
-    <!-- ================= MEMBER 2 ================= -->
-    <div class="team-member fade-up">
-      <div class="member-image">
-        <img src="../assets/images/team/member2.jpg" alt="Interior Project Manager">
-      </div>
-
-      <div class="member-info">
-        <h2>Project Manager</h2>
-        <h4>Planning & Coordination</h4>
-
-        <p>
-          The project manager oversees the complete lifecycle of each project,
-          from planning and vendor coordination to on-site execution.
-          Their role ensures that timelines, budgets, and quality standards
-          are consistently maintained.
-        </p>
-
-        <p>
-          By aligning design intent with execution on the ground,
-          they help deliver smooth workflows and dependable outcomes
-          across all project scales.
-        </p>
-      </div>
-    </div>
-
-    <!-- ================= MEMBER 3 ================= -->
-    <div class="team-member fade-up">
-      <div class="member-image">
-        <img src="../assets/images/team/member3.jpg" alt="Site Supervisor">
-      </div>
-
-      <div class="member-info">
-        <h2>Site Supervisor</h2>
-        <h4>On-Site Execution</h4>
-
-        <p>
-          The site supervisor manages daily on-site operations,
-          ensuring workmanship quality, material accuracy,
-          and adherence to approved drawings.
-        </p>
-
-        <p>
-          Acting as the link between planning and execution,
-          they ensure that every detail is implemented with care
-          and every project progresses smoothly to completion.
-        </p>
-      </div>
+    <div class="preview-card">
+      <a href="#">
+        <img src="../assets/images/project/bhukh-lagi-hai.jpg">
+        <h5>Bhukh Lagi Hai – Restaurant Interior</h5>
+        <span>Pan India</span>
+      </a>
     </div>
 
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer class="site-footer">
-
   <div class="footer-container">
 
     <div class="footer-brand">
-      <img src="../assets/images/logo/logo.png" alt="Pavan Interior Design">
-      <p>
-        We design and execute interiors with a focus on quality,
-        transparency, and long-term value — across residential
-        and commercial spaces.
-      </p>
-
+      <img src="../assets/images/logo/logo.png">
+      <p>We design and execute interiors with a focus on quality, transparency, and long-term value.</p>
       <div class="footer-social">
-        <a href="https://wa.me/918980531520" target="_blank">WhatsApp</a>
+        <a href="https://wa.me/916355549788">WhatsApp</a>
         <a href="mailto:info@pavaninterior.com">Email</a>
       </div>
     </div>
@@ -150,42 +276,43 @@
     <div class="footer-col">
       <h4>Company</h4>
       <a href="../index.html">Home</a>
-      <a href="../folders/work.html">Work</a>
+      <a href="work.html">Work</a>
       <a href="../about.html">About</a>
-      <a href="../folders/pricing.html">Pricing</a>
-      <a href="../book-consultation.html">Contact</a>
     </div>
 
     <div class="footer-col">
       <h4>Services</h4>
-      <a href="../services/home-interior.html">Home Interior</a>
-      <a href="../services/kitchen.html">Modular Kitchen</a>
-      <a href="../services/office-interior-design.html">Office Interior</a>
-      <a href="../services/turnkey-solution.html">Turnkey Solutions</a>
+      <a href="#">Home Interior</a>
+      <a href="#">Modular Kitchen</a>
+      <a href="#">Office Interior</a>
     </div>
 
     <div class="footer-col">
       <h4>Contact</h4>
-      <p>‪+91 63555 49788‬</p>
+      <p>+91 63555 49788</p>
       <p>info@pavaninterior.com</p>
-      <p>
-        Rudra Travels, Rudra travels,<br>
-        Krishna Park Society, ITI Rd, <br>
-        Kuber Nagar, Ahmedabad, Gujarat 382340
-      </p>
+      <p>Kuber Nagar, Ahmedabad</p>
     </div>
 
-  </div>
-
-  <div class="footer-locations">
-    Ahmedabad 
   </div>
 
   <div class="footer-bottom">
     © 2025 Pavan Interior Design. All Rights Reserved.
   </div>
-
 </footer>
+
+<script>
+const text = "OUR CRAFT. OUR WORK.";
+let i = 0;
+function type() {
+  if (i < text.length) {
+    document.getElementById("typingText").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type, 120);
+  }
+}
+window.onload = type;
+</script>
 
 </body>
 </html>
